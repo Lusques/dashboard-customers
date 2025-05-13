@@ -1,0 +1,5 @@
+@use "./typography" as typography;
+body,
+button {
+  font-family: typography.$font-family;
+}
