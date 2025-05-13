@@ -1,0 +1,96 @@
+@use "../../../styles/abstracts/variables" as *;
+$text-banner: map-get($neutral, "white");
+$bg-neutral: map-get($neutral, "white");
+$text-tertiary: map-get($neutral, "gray-600");
+
+.auth-layout {
+  display: flex;
+  background-color: $bg-neutral;
+  min-height: 200vh;
+  &__signin-container {
+    background-color: red;
+    height: 100%;
+    max-width: 955px;
+    min-height: 100vh;
+    width: 100%;
+  }
+  &__banner-container {
+    align-items: center;
+    background-image: url("../../../../assets/images/auth__bg-banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    height: 100%;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+  }
+  &__banner-logo {
+    max-width: 280px;
+    & > img {
+      width: 100%;
+    }
+  }
+  &__banner-info {
+    border-radius: 24px;
+    border: solid 1px rgba($text-banner, 0.2);
+
+    color: $text-banner;
+    padding: 32px 112px;
+
+    & > p {
+      font-size: 21px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    & > h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+  &__footer {
+    bottom: 40px;
+    position: fixed;
+    width: 100%;
+  }
+  &__footer-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1348px;
+    padding: 0 24px;
+    & > p {
+      color: $text-tertiary;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+  &__footer-nav {
+    align-items: center;
+    color: $text-banner;
+    display: flex;
+    font-size: 14px;
+    gap: 42px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__mode-button {
+    background: #868cff;
+    background: linear-gradient(127deg, rgba(134, 140, 255, 1) 0%, rgba(67, 24, 255, 1) 100%);
+    border-radius: 100%;
+    border: none;
+    bottom: 24px;
+    color: white;
+    height: 60px;
+    outline: none;
+    position: fixed;
+    right: 24px;
+    width: 60px;
+  }
+}
